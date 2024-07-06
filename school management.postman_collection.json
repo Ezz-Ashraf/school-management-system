@@ -1,0 +1,669 @@
+{
+	"info": {
+		"_postman_id": "f6c82433-0c9d-446d-b0d6-7cf34e98225b",
+		"name": "school management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33455078"
+	},
+	"item": [
+		{
+			"name": "class",
+			"item": [
+				{
+					"name": "find by query",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InNjaG9vbEFkbWluIiwiaWF0IjoxNzIwMjI1MTMzLCJleHAiOjE4MTQ4OTc5MzN9.cJPFzYWeTXrbdz8bIPhoD4ZLCWpQ5f9m4vCRhXjmJaU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5111/api/class/find?search=5&limit=2&page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"class",
+								"find"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "5"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new class",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InNjaG9vbEFkbWluIiwiaWF0IjoxNzIwMjI1MTMzLCJleHAiOjE4MTQ4OTc5MzN9.cJPFzYWeTXrbdz8bIPhoD4ZLCWpQ5f9m4vCRhXjmJaU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"3-B\",\n    \"schoolId\":\"66885389a010bddd69e3df1c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5111/api/class/create",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"class",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findOne",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InNjaG9vbEFkbWluIiwiaWF0IjoxNzIwMjI1MTMzLCJleHAiOjE4MTQ4OTc5MzN9.cJPFzYWeTXrbdz8bIPhoD4ZLCWpQ5f9m4vCRhXjmJaU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5111/api/class/findOne?id=66889e20e4d59d2bd3714d64",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"class",
+								"findOne"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "66889e20e4d59d2bd3714d64"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOne",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJpYXQiOjE3MjAyMjI3NDksImV4cCI6MTgxNDg5NTU0OX0.kodeEx17y1MglVT9_I7Wrwubb2wj9l169rBql6YtfB8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InNjaG9vbEFkbWluIiwiaWF0IjoxNzIwMjI1MTMzLCJleHAiOjE4MTQ4OTc5MzN9.cJPFzYWeTXrbdz8bIPhoD4ZLCWpQ5f9m4vCRhXjmJaU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5111/api/class/deleteOne?id=66889e20e4d59d2bd3714d64",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"class",
+								"deleteOne"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "66889e20e4d59d2bd3714d64"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update class",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InNjaG9vbEFkbWluIiwiaWF0IjoxNzIwMjI1MTMzLCJleHAiOjE4MTQ4OTc5MzN9.cJPFzYWeTXrbdz8bIPhoD4ZLCWpQ5f9m4vCRhXjmJaU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"P3A\",\n    \"id\":\"66889e20e4d59d2bd3714d64\",\n    \"schoolId\":\"66885389a010bddd69e3df1c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5111/api/class/updateOne",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"class",
+								"updateOne"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "Create new student",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InNjaG9vbEFkbWluIiwiaWF0IjoxNzIwMjI1MTMzLCJleHAiOjE4MTQ4OTc5MzN9.cJPFzYWeTXrbdz8bIPhoD4ZLCWpQ5f9m4vCRhXjmJaU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"ezz ashraf\",\n    \"classId\":\"66889e20e4d59d2bd3714d64\",\n    \"age\":20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5111/api/student/create",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"student",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find by query",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InNjaG9vbEFkbWluIiwiaWF0IjoxNzIwMjI1MTMzLCJleHAiOjE4MTQ4OTc5MzN9.cJPFzYWeTXrbdz8bIPhoD4ZLCWpQ5f9m4vCRhXjmJaU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5111/api/student/find?search=ezz&limit=2&page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"student",
+								"find"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "ezz"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findOne",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InNjaG9vbEFkbWluIiwiaWF0IjoxNzIwMjI1MTMzLCJleHAiOjE4MTQ4OTc5MzN9.cJPFzYWeTXrbdz8bIPhoD4ZLCWpQ5f9m4vCRhXjmJaU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5111/api/student/findOne?id=6688a2b0e20abc9bddef20e4",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"student",
+								"findOne"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6688a2b0e20abc9bddef20e4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOne",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJpYXQiOjE3MjAyMjI3NDksImV4cCI6MTgxNDg5NTU0OX0.kodeEx17y1MglVT9_I7Wrwubb2wj9l169rBql6YtfB8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InNjaG9vbEFkbWluIiwiaWF0IjoxNzIwMjI1MTMzLCJleHAiOjE4MTQ4OTc5MzN9.cJPFzYWeTXrbdz8bIPhoD4ZLCWpQ5f9m4vCRhXjmJaU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5111/api/student/deleteOne?id=6688a2b0e20abc9bddef20e4",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"student",
+								"deleteOne"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6688a2b0e20abc9bddef20e4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update student",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InNjaG9vbEFkbWluIiwiaWF0IjoxNzIwMjI1MTMzLCJleHAiOjE4MTQ4OTc5MzN9.cJPFzYWeTXrbdz8bIPhoD4ZLCWpQ5f9m4vCRhXjmJaU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"3ez a4raf\",\n    \"age\":25,\n    \"id\":\"6688a2b0e20abc9bddef20e4\",\n    \"classId\":\"66889e20e4d59d2bd3714d64\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5111/api/student/updateOne",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"student",
+								"updateOne"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "school",
+			"item": [
+				{
+					"name": "find by query",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InN1cGVyQWRtaW4iLCJpYXQiOjE3MjAyMjQzODQsImV4cCI6MTgxNDg5NzE4NH0.amYf-h6GQlKtquN7lVgXl48eFYH8rWKg7xnQ2E_GdSo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5111/api/school/find?search=deg&limit=2&page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"school",
+								"find"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "deg"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findOne",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InN1cGVyQWRtaW4iLCJpYXQiOjE3MjAyMjQzODQsImV4cCI6MTgxNDg5NzE4NH0.amYf-h6GQlKtquN7lVgXl48eFYH8rWKg7xnQ2E_GdSo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5111/api/school/findOne?id=66885389a010bddd69e3df1c",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"school",
+								"findOne"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "66885389a010bddd69e3df1c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOne",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJpYXQiOjE3MjAyMjI3NDksImV4cCI6MTgxNDg5NTU0OX0.kodeEx17y1MglVT9_I7Wrwubb2wj9l169rBql6YtfB8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InN1cGVyQWRtaW4iLCJpYXQiOjE3MjAyMjM4OTMsImV4cCI6MTgxNDg5NjY5M30.Cr4BA_4FI4bx2pRn1HiU4bN4Ag--h84T2hoW0Mc_Z0k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5111/api/school/deleteOne?id=66885389a010bddd69e3df1c",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"school",
+								"deleteOne"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "66885389a010bddd69e3df1c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new school",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InNjaG9vbEFkbWluIiwiaWF0IjoxNzIwMjI1MTMzLCJleHAiOjE4MTQ4OTc5MzN9.cJPFzYWeTXrbdz8bIPhoD4ZLCWpQ5f9m4vCRhXjmJaU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Degla valley 476\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5111/api/school/create",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"school",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update school",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njg4MDQ2YTgzODRkNDFiMTBkYzEyMGEiLCJ1c2VyUm9sZSI6InNjaG9vbEFkbWluIiwiaWF0IjoxNzIwMjI1MTMzLCJleHAiOjE4MTQ4OTc5MzN9.cJPFzYWeTXrbdz8bIPhoD4ZLCWpQ5f9m4vCRhXjmJaU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Degla valley 3\",\n    \"id\":\"66885389a010bddd69e3df1c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5111/api/school/updateOne",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"school",
+								"updateOne"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create new user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQHVzZXJzLmNvbSIsImlkIjoiNjRkYjFkMDJiOGVkNTUwYzVlOWZlMmIzIiwiaWF0IjoxNjkyMDgxNTU5LCJleHAiOjE3ODY3NTQzNTl9.S6BjFKyf2OCl0xZ--d6NioV3T_Gjea3bL5X5jTQZdeU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"ezzashraf_123\",\n    \"email\": \"qwer_4247@mail.com\",\n    \"mobileNumber\":\"+24178757580\",\n    \"password\": \"ezzashraf_123\",\n    \"role\":\"superAdmin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5111/api/user/createUser",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"user",
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGUzNmY3ZWU0Y2JhZDFlNzFkZjdlZTYiLCJtb2JpbGVOdW1iZXIiOiIwMTAxNDIxMjEyNDMyIiwiaWF0IjoxNjkyNjI2ODE0LCJleHAiOjE3ODcyOTk2MTR9.enEsEH3PQilaYTDI10SJ9CyouzD867JT3Mb6g92KA6I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"qwer_4247@mail.com\",\n    \"password\": \"ezzashraf_123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5111/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5111",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

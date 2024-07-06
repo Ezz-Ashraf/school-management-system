@@ -1,8 +1,8 @@
 ## This is  a school management system with 3 main modules (school, classroom, student) and of course user to control the 3 based on the role
 ## Superadmins will have the ability to add schools, while school admins can manage classrooms and students within their respective schools.
+# Note that the app is deployed on ec2 instance 18.212.214.34:80 and the postman collection is attached in the repo
 
-
-# To start the application
+# To start the application locally:
 ## 1-set your mongodb and redis in .env , you can use the docker-compose file in mongo-redis folder(it is set by default in the .env file)
 ## 2-run npm i
 ## 3-run node index
